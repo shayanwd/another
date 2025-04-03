@@ -1,0 +1,119 @@
+.am-banner {
+    width: 100%;
+    padding: 182px 0 184px 0;
+    background-color: #f3ffdb;
+}
+
+.am-banner .hr-cntn {
+    display: grid;
+    grid-template-columns: 1fr 731px;
+    align-items: center;
+    gap: 56px;
+    padding-left: 158px;
+}
+
+.am-banner .hr-left-cntn {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.am-banner .hr-left-cntn h2 {
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 103px;
+    letter-spacing: -2%;
+    text-transform: capitalize;
+    color: #353439;
+}
+
+.am-banner .hr-left-cntn h1 {
+    font-weight: 700;
+    font-size: 170px;
+    line-height: 103px;
+    letter-spacing: -2%;
+    text-transform: capitalize;
+    color: #C0DE48;
+    padding-bottom: 34px;
+}
+
+.am-banner .hr-left-cntn p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 48px;
+    letter-spacing: 0%;
+    color: #555770;
+}
+
+.am-banner .hr-right-img {
+    width: 100%;
+    max-width: 811px;
+    height: auto;
+}
+
+.am-banner .hr-right-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.am-experience {
+    width: 100%;
+    padding: 125px 0 123px 0;
+}
+
+.am-experience .exp-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.am-experience .exp-tp-left {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.am-experience .exp-tp-right a.site-btn {
+    margin-left: auto;
+}
+
+.exp-bot-card {
+    margin-top: 104px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 19px;
+}
+
+.exp-bot-card .exp-crd {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 44px;
+    padding: 81px 31px 70px 32px;
+    background-color: #F3FFDA;
+    border-radius: 32px;
+}
+
+.exp-bot-card .exp-crd:nth-child(2), .exp-bot-card .exp-crd:nth-child(4) {
+    background-color: #F2F2F2;
+}
+
+.exp-bot-card .exp-crd img {
+    width: 100%;
+    max-width: 109px;
+    height: 100%;
+}
+
+.exp-bot-card .exp-crd h3 {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 38px;
+    letter-spacing: -2%;
+    text-align: center;
+    text-transform: capitalize;
+    color: #353439;
+}

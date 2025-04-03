@@ -3,3 +3,48 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    font-family: "Outfit", sans-serif;
+    overflow-x: clip;
+}
+
+.container {
+    width: 100%;
+    max-width: 1580px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+a.site-btn {
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #353439;
+    padding: 24px 30px 20px 30px;
+    background-color: #C0DE48;
+    border-radius: 78px;
+    text-decoration: none;
+    width: fit-content;
+    display: block;
+}
+
+.sec-title {
+    font-weight: 700;
+    font-size: 100px;
+    line-height: 103px;
+    letter-spacing: -2%;
+    text-transform: capitalize;
+    color: #353439;
+}
+
+.disc {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 37px;
+    letter-spacing: 0%;
+    color: #555770;
+}
