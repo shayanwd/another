@@ -1,0 +1,46 @@
+.top-banner {
+    background-color: black;
+}
+
+.top-banner-content h1 {
+    color: #FFF;
+    text-align: center;
+    font-family: Outfit;
+    font-size: 110px;
+    font-weight: 700;
+    letter-spacing: -2.2px;
+    text-transform: capitalize;
+}
+
+.top-banner-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+
+.top-banner-content h1 span {
+    display: block;
+    background: linear-gradient(123deg, #F3FFDA 30.19%, #C0DE48 63.6%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Outfit;
+    font-size: 110px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 123px;
+    letter-spacing: -2.2px;
+    text-transform: capitalize;
+}
+
+.top-banner-content p {
+    color: #FFF;
+    text-align: center;
+    font-family: Outfit;
+    font-size: 22px;
+    font-weight: 400;
+    display: inline-block;
+
+}

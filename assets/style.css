@@ -7,6 +7,10 @@
 
 body {
     font-family: "Outfit", sans-serif;
+
+}
+
+html {
     overflow-x: clip;
 }
 
@@ -25,12 +29,19 @@ a.site-btn {
     text-align: center;
     text-transform: uppercase;
     color: #353439;
-    padding: 24px 30px 20px 30px;
+    padding: 5px 10px;
     background-color: #C0DE48;
-    border-radius: 78px;
     text-decoration: none;
     width: fit-content;
     display: block;
+    border-radius: 38.5px;
+    border: 1px solid #C0DE48;
+    background: linear-gradient(180deg, #F3FFDA 0%, #C0DE48 100%);
+    min-width: 280px;
+    min-height: 77px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .sec-title {
@@ -41,9 +52,11 @@ a.site-btn {
     text-transform: capitalize;
     color: #353439;
 }
-.sec-title span{
+
+.sec-title span {
     color: #C0DE48;
 }
+
 .disc {
     font-weight: 400;
     font-size: 22px;
