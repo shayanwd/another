@@ -923,6 +923,7 @@
     .am-footer .ft-map img.map {
         width: auto;
     }
+
     .open-lc-cntn .lc-left .sec-title {
         font-size: 44px;
         line-height: 58px;
@@ -1107,12 +1108,13 @@
         opacity: 1;
         left: -78px;
     }
+
     .open-lc-cntn {
         grid-template-columns: 1fr;
         gap: 40px;
         padding: 120px 25px 60px 25px;
     }
-    
+
 }
 
 @media (max-width: 435px) {
@@ -1209,46 +1211,46 @@
         width: 50px;
         top: -34px;
     }
-    
+
     .open-lc-cntn {
         padding: 80px 15px 40px 15px;
     }
-    
+
     .open-lc-cntn .lc-left .sec-title {
         font-size: 37px;
         line-height: 50px;
     }
-    
+
     .open-lc-cntn .lc-left {
         gap: 24px;
     }
-    
+
     .am-franchise .exp-top {
         grid-template-columns: 1fr;
         gap: 24px;
     }
-    
+
     .am-franchise .exp-top .exp-tp-right {
         padding: 0;
     }
-    
+
     .am-franchise {
         padding-top: 120px;
     }
-    
+
     .am-franchise .mq-parent {
         margin-top: 60px;
         padding: 16px 0;
     }
-    
+
     .am-franchise .mq-parent::before {
         display: none;
     }
-    
+
     .am-franchise .mq-parent::after {
         display: none;
     }
-    
+
     .am-franchise .mq-parent .mq-inner .mq-coll {
         padding: 32px 20px;
         gap: 16px;
@@ -1256,150 +1258,162 @@
         height: 340px;
         border-radius: 24px;
     }
-    
+
     .am-franchise .mq-parent .mq-inner .mq-coll img {
         margin-bottom: 16px;
         width: 60px;
         height: 60px;
     }
-    
+
     .am-franchise .mq-parent .mq-inner .mq-coll h4 {
         font-size: 22px;
         line-height: 30px;
     }
-    
+
     .am-franchise .mq-parent .mq-inner .mq-coll p {
         font-size: 16px;
         line-height: 24px;
     }
-    
+
     .gt-cntn .gt-left {
         gap: 24px;
     }
-    
+
     .gt-cntn .gt-left p {
         font-size: 16px;
         line-height: 24px;
     }
-    
+
     .gt-cntn .gt-right .slide-box {
         width: 300px;
         height: 253px;
         border-radius: 16px;
         padding: 20px 25px 6px 20px;
     }
-    
+
     .gt-cntn .gt-right .slide-box .slide-top {
         gap: 16px;
     }
-    
+
     .gt-cntn .gt-right .slide-box .slide-top img {
         width: 40px;
         height: 40px;
     }
-    
+
     .gt-cntn .gt-right .slide-box .slide-top .rev-dt h6 {
         font-size: 18px;
         line-height: 26px;
         margin: 0;
     }
-    
+
     .gt-cntn .gt-right .slide-box .slide-top .rev-dt img {
         width: 80px;
     }
-    
+
     .gt-cntn .gt-right .slide-box .slide-bottom p {
         font-size: 14px;
         line-height: 20px;
     }
-    
+
     .am-contact .contact-cntn {
         max-width: 100%;
         border-radius: 24px;
         padding: 29px 20px 38px 20px;
     }
-    
+
     .am-contact .contact-cntn h1 {
         font-size: 28px;
         line-height: 37px;
         margin-bottom: 24px;
     }
-    
-    .am-contact .contact-cntn form .input-field input, .am-contact .contact-cntn form .input-field select, .am-contact .contact-cntn form .input-field textarea {
+
+    .am-contact .contact-cntn form .input-field input,
+    .am-contact .contact-cntn form .input-field select,
+    .am-contact .contact-cntn form .input-field textarea {
         font-size: 14px;
     }
-    
+
     .am-contact .contact-cntn form .input-field {
         padding: 12px 10px;
         gap: 6px;
     }
-    
+
     .am-contact .contact-cntn form h5 {
         font-size: 16px;
     }
-    
+
     .option-label {
         padding: 14px 28px;
         font-size: 14px;
     }
-    
+
     .am-contact .contact-cntn form .options {
         gap: 10px;
     }
-    
+
     .am-contact .contact-cntn form button {
         padding: 16px;
         font-size: 18px;
     }
-    
+
     .am-contact .contact-cntn form p {
         font-size: 10px;
     }
-    
+
     .am-contact .contact-cntn form p a {
         font-size: 10px;
     }
-    
+
     .am-contact .contact-cntn form .input-field textarea {
         height: 80px;
         min-height: 80px;
     }
-    
+
     .am-footer .ft-left form .input-field {
         flex-direction: column;
         align-items: flex-start;
     }
-    
+
     .am-footer .ft-left form .input-field .in-fd-left {
         padding: 14px 28px;
         gap: 9px;
     }
-    
+
     .am-footer .ft-left form .input-field .in-fd-left input {
         font-size: 14px;
     }
-    
+
     .am-footer .ft-left form .input-field .in-fd-right button {
         padding: 16px 28px;
         font-size: 18px;
     }
-    
+
     .am-footer .ft-map .logo {
         max-width: 300px;
     }
-    
+
     .am-footer .ft-map img.map {
         width: 100%;
         object-fit: cover;
         height: 100%;
         border-radius: 24px;
     }
-    
+
     .am-contact {
         height: 100%;
     }
-    
+
     .am-footer {
         padding-top: 20px;
+    }
+
+    .am-footer .pay-card-img {
+        width: 100%;
+        pad: 10px;
+        border-radius: 10px;
+    }
+
+    .am-footer .pay-card-img img {
+        width: 100%;
     }
 }
