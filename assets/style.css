@@ -41,9 +41,11 @@ a.site-btn {
     text-transform: capitalize;
     color: #353439;
 }
-.sec-title span{
+
+.sec-title span {
     color: #C0DE48;
 }
+
 .disc {
     font-weight: 400;
     font-size: 22px;
