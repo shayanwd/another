@@ -25,12 +25,44 @@ a.site-btn {
     text-align: center;
     text-transform: uppercase;
     color: #353439;
-    padding: 24px 30px 20px 30px;
+    padding: 0px 15px 0px 15px;
     background: linear-gradient(180deg, #F3FFDA 0%, #C0DE48 100%);
     border-radius: 78px;
     text-decoration: none;
     width: fit-content;
     display: block;
+    border-radius: 38.5px;
+    border: 1px solid #C0DE48;
+    max-width: 280px;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #F3FFDA 0%, #C0DE48 100%);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+a.site-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(192, 222, 72, 0.4);
+}
+
+a.site-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: 0.5s;
+}
+
+a.site-btn:hover::before {
+    left: 100%;
 }
 
 .sec-title {

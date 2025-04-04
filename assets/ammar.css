@@ -207,11 +207,11 @@
 .am-franchise {
     display: inline-block;
     width: 100%;
-    padding: 249px 0 67px 0;
+    padding: 60px 0 60px 0;
 }
 
 .am-franchise .exp-top {
-    align-items: flex-start;
+    align-items: center;
 }
 
 .am-franchise .exp-top .exp-tp-right {
@@ -346,7 +346,7 @@
 }
 
 .gt-cntn .gt-right {
-    width: 45%;
+    width: 50%;
     position: relative;
 }
 
@@ -381,8 +381,8 @@
 }
 
 .gt-cntn .gt-right .slide-box {
-    width: 579px;
-    height: 251px;
+    width: 100%;
+    height: fit-content;
     padding: 30px 35px 6px 26px;
     background-color: #F6F6F6;
     border-radius: 24px;
@@ -575,7 +575,7 @@
 .am-footer {
     position: relative;
     width: 100%;
-    padding: 274px 0 234px 0;
+    padding: 274px 0 60px 0;
     background-color: #000000;
 }
 
@@ -715,26 +715,29 @@
     padding: 13px 25px 13px 15px;
     background-color: #fff;
     border-radius: 8px;
+    width: fit-content;
 }
 
 .am-footer .ft-map {
     display: flex;
     flex-direction: column;
-    gap: 65px;
+    gap: 30px;
     align-items: flex-end;
 }
 
 .am-footer .ft-map .logo {
     width: 100%;
-    max-width: 433px;
-    height: 100%;
-    padding-right: 94px;
+    max-width: 400px;
+
+    margin: 0 auto;
+    text-align: center;
 }
 
 .am-footer .ft-map img.map {
     border-radius: 32px;
     width: 100%;
-    height: 530px;
+    height: 400px;
+    object-fit: cover;
 }
 
 
