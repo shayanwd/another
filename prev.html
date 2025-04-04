@@ -1,4 +1,23 @@
-.am-banner {
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/style.css">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <!--  -->
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <style>
+        .am-banner {
     width: 100%;
     padding: 182px 0 184px 0;
     background-color: #f3ffdb;
@@ -236,6 +255,7 @@
     display: inline-block;
     width: 100%;
     margin: 103px 0;
+    padding: 127px 0 112px 0;
     /* height: 750px; */
     /* background: rgb(255, 255, 255);
     background: linear-gradient(0deg,
@@ -252,41 +272,16 @@
     display: grid;
     grid-template-columns: 40% 1fr;
     align-items: center;
+    gap: 142px;
     justify-content: space-between;
-    position: relative;
-    padding: 0 97px;
-    gap: 110px;
-}
-.open-lc-cntn::before{
-    content: '';
-    display: block;
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 510px;
-    background: #000000;
-    border-radius: 32px;
-    z-index: -1;
-    top: calc(84% - 510px);
 }
 
-.open-lc-cntn::after{
-    content: '';
-    display: block;
-    position: absolute;
-    left: 97px;
-    width: 184px;
-    height: 195px;
-    top: 0;
-}
 .open-lc-cntn .lc-left {
     display: flex;
     flex-direction: column;
     gap: 48px;
 }
-.open-lc-cntn .lc-left .sec-title{
-    color: #FFFFFF;
-}
+
 .open-lc-cntn .lc-right {
     width: 100%;
     max-width: 680px;
@@ -414,31 +409,14 @@
 .am-contact {
     width: 100%;
     padding-top: 83px;
-    background-image: url(./images/contact-bg.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-}
-
-.am-contact::before {
-    content: '';
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.85669) 67.52%, #000000 100%);
+    background-color: #DBDBDB;
 }
 
 .am-contact .contact-cntn {
-    padding: 79px 60px 58px 60px;
+    padding: 79px 62px 58px 62px;
     background-color: #fff;
     border-radius: 32px;
     max-width: 680px;
-    z-index: 999;
-    position: relative;
 }
 
 .am-contact .contact-cntn h1 {
@@ -503,8 +481,8 @@
     padding: 18px 0;
     border: none;
     outline: none;
-    background: linear-gradient(180deg, #F3FFDA 0%, #C0DE48 100%);
-    border-radius: 32px;
+    background-color: #C0DE48;
+    border-radius: 8px;
     font-family: Outfit;
     font-weight: 700;
     font-size: 22px;
@@ -519,15 +497,13 @@
     line-height: 100%;
     color: #535353;
 }
-
-.am-contact .contact-cntn form p a {
+.am-contact .contact-cntn form p a{
     font-weight: 500;
     font-size: 12px;
     line-height: 100%;
     color: #535353;
     text-decoration: underline;
 }
-
 .am-footer {
     width: 100%;
     padding: 273px 0 234px 0;
@@ -1014,3 +990,378 @@
         gap: 24px;
     }
 }
+    </style>
+</head>
+
+<body>
+    <section class="am-banner">
+        <div class="hr-cntn">
+            <div class="hr-left-cntn">
+                <h2>Own the Ideal Indoor Golf</h2>
+                <h1>Experience</h1>
+                <p>Bring a turnkey, differentiated indoor golf business to your neighborhood</p>
+                <a href="#" class="site-btn">Learn More</a>
+            </div>
+
+            <div class="hr-right-img">
+                <img src="./assets/images/hero-img.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="am-experience">
+        <div class="container">
+            <div class="exp-top">
+                <div class="exp-tp-left">
+                    <h1 class="sec-title">Experience the difference.</h1>
+                    <p class="disc">No compromises. A country club experience with public course prices.</p>
+                </div>
+
+                <div class="exp-tp-right">
+                    <a href="#" class="site-btn">Learn More</a>
+                </div>
+            </div>
+
+            <div class="exp-bot-card">
+                <div class="exp-crd">
+                    <img src="./assets/images/exp-card-1.png" alt="">
+                    <h3>Private Simulator Suites</h3>
+                </div>
+
+                <div class="exp-crd">
+                    <img src="./assets/images/exp-card-2.png" alt="">
+                    <h3>24/7, Fully Self-Services</h3>
+                </div>
+
+                <div class="exp-crd">
+                    <img src="./assets/images/exp-card-3.png" alt="">
+                    <h3>premium amenities, affordable prices</h3>
+                </div>
+
+                <div class="exp-crd">
+                    <img src="./assets/images/exp-card-4.png" alt="">
+                    <h3>Advanced, realistic golf experience</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="am-work">
+        <div class="container">
+            <div class="wk-cntn">
+                <div class="wk-left">
+                    <h1 class="sec-title">How it works</h1>
+
+                    <p class="disc">We'll get to know each other through a simple, mutual evaluation process.</p>
+
+                    <a href="#" class="site-btn">Check Eligibility</a>
+                </div>
+                <div class="wk-right">
+                    <!-- Swiper -->
+                    <div class="swiper mySwiper">
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">Slide 1</div>
+                                <div class="swiper-slide">Slide 2</div>
+                                <div class="swiper-slide">Slide 3</div>
+                                <div class="swiper-slide">Slide 4</div>
+                                <div class="swiper-slide">Slide 5</div>
+                                <div class="swiper-slide">Slide 6</div>
+                                <div class="swiper-slide">Slide 7</div>
+                                <div class="swiper-slide">Slide 8</div>
+                                <div class="swiper-slide">Slide 9</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+    <section class="am-cs-care">
+        <div class="container">
+            <div class="cs-care-cntn">
+                <div class="cs-cr-left">
+                    <h3>Turnkey Operation. High Margin Potential.</h3>
+                </div>
+
+                <div class="cs-cr-right">
+                    <div class="rg-cntn lv">
+                        <h2>40%+</h2>
+                        <span>UNIT-LEVEL EBITDA</span>
+                    </div>
+
+                    <div class="rg-cntn lv">
+                        <h2>0</h2>
+                        <span>Staff Required</span>
+                    </div>
+
+                    <div class="rg-cntn lv">
+                        <h2>24/7</h2>
+                        <span>CUSTOMER SUPPORT HANDLED FOR YOU</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="am-open-lc">
+        <div class="container">
+            <div class="open-lc-cntn">
+                <div class="lc-left">
+                    <h1 class="sec-title">Open Your Location Today</h1>
+
+                    <a href="#" class="site-btn">Check Availability</a>
+                </div>
+
+                <div class="lc-right">
+                    <img src="./assets/images/lc-img.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="am-franchise">
+        <div class="container">
+            <div class="exp-top">
+                <div class="exp-tp-left">
+                    <h1 class="sec-title">Why Franchise With Us?</h1>
+                </div>
+
+                <div class="exp-tp-right">
+                    <p class="disc">A true, semi-passive investment and a turnkey operation. Your facility will be
+                        differentiated from day one.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mq-parent">
+            <div class="mq-inner">
+                <div class="mq-coll">
+                    <img src="./assets/images/fr-img-1.png" alt="">
+                    <h4>Differentiated Experience</h4>
+                    <p>From day one, you'll own an elevated, inviting space that will stand out in your neighborhood.
+                    </p>
+                </div>
+
+                <div class="mq-coll">
+                    <img src="./assets/images/fr-img-2.png" alt="">
+                    <h4>A9OS Tech</h4>
+                    <p>Industry-leading proprietary technology that acts a one-stop-shop to digitally and remotely
+                        manage your physical location(s).</p>
+                </div>
+
+                <div class="mq-coll">
+                    <img src="./assets/images/fr-img-2.png" alt="">
+                    <h4>24/7 Support</h4>
+                    <p>If something goes wrong with the software, you won't be getting calls while you're with family or
+                        in a meeting (or sleeping!).</p>
+                </div>
+
+                <div class="mq-coll">
+                    <img src="./assets/images/fr-img-1.png" alt="">
+                    <h4>Growing Brand</h4>
+                    <p>Capitalize on the brand, marketing, and creative assets that are actively in the market. Our
+                        company-owned locations also contribute to the national brand fund!</p>
+                </div>
+            </div>
+
+            <div class="mq-inner">
+                <div class="mq-coll">
+                    <img src="./assets/images/fr-img-1.png" alt="">
+                    <h4>Differentiated Experience</h4>
+                    <p>From day one, you'll own an elevated, inviting space that will stand out in your neighborhood.
+                    </p>
+                </div>
+
+                <div class="mq-coll">
+                    <img src="./assets/images/fr-img-2.png" alt="">
+                    <h4>A9OS Tech</h4>
+                    <p>Industry-leading proprietary technology that acts a one-stop-shop to digitally and remotely
+                        manage your physical location(s).</p>
+                </div>
+
+                <div class="mq-coll">
+                    <img src="./assets/images/fr-img-2.png" alt="">
+                    <h4>24/7 Support</h4>
+                    <p>If something goes wrong with the software, you won't be getting calls while you're with family or
+                        in a meeting (or sleeping!).</p>
+                </div>
+
+                <div class="mq-coll">
+                    <img src="./assets/images/fr-img-1.png" alt="">
+                    <h4>Growing Brand</h4>
+                    <p>Capitalize on the brand, marketing, and creative assets that are actively in the market. Our
+                        company-owned locations also contribute to the national brand fund!</p>
+                </div>
+            </div>
+
+            <div class="mq-inner">
+                <div class="mq-coll">
+                    <img src="./assets/images/fr-img-1.png" alt="">
+                    <h4>Differentiated Experience</h4>
+                    <p>From day one, you'll own an elevated, inviting space that will stand out in your neighborhood.
+                    </p>
+                </div>
+
+                <div class="mq-coll">
+                    <img src="./assets/images/fr-img-2.png" alt="">
+                    <h4>A9OS Tech</h4>
+                    <p>Industry-leading proprietary technology that acts a one-stop-shop to digitally and remotely
+                        manage your physical location(s).</p>
+                </div>
+
+                <div class="mq-coll">
+                    <img src="./assets/images/fr-img-2.png" alt="">
+                    <h4>24/7 Support</h4>
+                    <p>If something goes wrong with the software, you won't be getting calls while you're with family or
+                        in a meeting (or sleeping!).</p>
+                </div>
+
+                <div class="mq-coll">
+                    <img src="./assets/images/fr-img-1.png" alt="">
+                    <h4>Growing Brand</h4>
+                    <p>Capitalize on the brand, marketing, and creative assets that are actively in the market. Our
+                        company-owned locations also contribute to the national brand fund!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="am-guest">
+        <div class="container">
+            <div class="gt-cntn">
+                <div class="gt-left">
+                    <h1 class="sec-title">What our <span>Guests</span><br /> are saying</h1>
+
+                    <p class="disc">Don't just take our word for it. See why our guests love Another Nine.</p>
+                </div>
+                <div class="gt-right"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="am-contact">
+        <div class="container">
+            <div class="contact-cntn">
+                <h1>Request Franchise Information</h1>
+                <form action="">
+                    <div class="input-field">
+                        <label for=""><img src="./assets/images/profile.svg" alt=""></label>
+                        <input type="text" placeholder="Name" required="">
+                    </div>
+
+                    <div class="input-field">
+                        <label for=""><img src="./assets/images/email.svg" alt=""></label>
+                        <input type="email" placeholder="email" required="">
+                    </div>
+
+                    <div class="input-field">
+                        <label for=""><img src="./assets/images/mobile.svg" alt=""></label>
+                        <input type="text" placeholder="Phone" required="">
+                    </div>
+
+                    <div class="input-field">
+                        <label for=""><img src="./assets/images/location.svg" alt=""></label>
+                        <select name="" id="">
+                            <option value="">How much capital is available for you to invest?</option>
+                            <option value="">How much capital is available for you to invest?</option>
+                            <option value="">How much capital is available for you to invest?</option>
+                        </select>
+                    </div>
+
+                    <div class="input-field">
+                        <label for=""><img src="./assets/images/note-add.svg" alt=""></label>
+                        <select name="" id="">
+                            <option value="">In which state are you looking to open a franchise?</option>
+                            <option value="">In which state are you looking to open a franchise?</option>
+                            <option value="">In which state are you looking to open a franchise?</option>
+                        </select>
+                    </div>
+
+                    <h5>How did you hear about us?</h5>
+
+                    <div class="input-field">
+                        <textarea name="" id="" placeholder="Comments"></textarea>
+                    </div>
+
+                    <button>Send message</button>
+
+                    <p class="note">This site is protected by hCaptcha and the hCaptcha <a href="#">Privacy Policy </a> and <a href="#">Terms of Service </a>  apply</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="am-footer">
+        <div class="container">
+            <div class="footer-cntn">
+                <div class="ft-left">
+                    <h4>Sign up for exclusive offers!</h4>
+
+                    <form action="">
+                        <div class="input-field">
+                            <div class="in-fd-left">
+                                <label for=""><img src="./assets/images/email.svg" alt=""></label>
+                                <input type="email" placeholder="email" required />
+                            </div>
+
+                            <div class="in-fd-right">
+                                <button><img src="./assets/images/right-arrow.svg" alt=""></button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <h6>
+                        Our subscribers get first access to special events, promotions, and the latest news from Another
+                        Nine. We promise not to spam you
+                    </h6>
+
+                    <div class="sc-links">
+                        <h2>Follow us:</h2>
+                        <ul>
+                            <li><a href="#"><img src="./assets/images/whatsapp.svg" alt=""></a></li>
+                            <li><a href="#"><img src="./assets/images/facebook.svg" alt=""></a></li>
+                            <li><a href="#"><img src="./assets/images/instagram.svg" alt=""></a></li>
+                            <li><a href="#"><img src="./assets/images/twitter.svg" alt=""></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="short-parah">
+                        <p>© 2025, Another Nine. All rights reserved.</p>
+                        <p>
+                            Powered by <a href="#">Shopify</a> | <a href="#">Refund policy</a> | <a href="#">Privacy
+                                policy</a> | <a href="#">Terms of service</a> | <a href="#">Terms of service</a>
+                        </p>
+                    </div>
+
+                    <div class="pay-card-img">
+                        <img src="./assets/images/footer-img.png" alt="">
+                    </div>
+                </div>
+
+                <div class="ft-map">
+                    <img src="./assets/images/map.png" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        direction: "vertical",
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+</script>
+
+</html>
