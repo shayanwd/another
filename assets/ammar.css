@@ -1059,7 +1059,7 @@
     }
 
     .am-franchise {
-        padding-top: 200px;
+        padding-top: 100px;
     }
 
     .gt-cntn {
@@ -1238,7 +1238,7 @@
     }
 
     .am-franchise {
-        padding-top: 120px;
+        padding-top: 60px;
     }
 
     .am-franchise .mq-parent {
@@ -1288,10 +1288,14 @@
     }
 
     .gt-cntn .gt-right .slide-box {
-        width: 300px;
-        height: 253px;
+        width: 100%;
+        height: inherit;
         border-radius: 16px;
         padding: 20px 25px 6px 20px;
+    }
+
+    .am-guest {
+        padding-bottom: 40px;
     }
 
     .gt-cntn .gt-right .slide-box .slide-top {
@@ -1407,7 +1411,7 @@
     }
 
     .am-footer {
-        padding: 20px 0 120px;
+        padding: 20px 0 40px;
     }
 
     .am-footer .pay-card-img {

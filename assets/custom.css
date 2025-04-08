@@ -686,3 +686,472 @@
         font-size: 28px;
     }
 }
+
+/* Scroll Animations */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-left {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-right {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.6s ease-out;
+}
+
+.animate {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/* Add stagger effect for grid items */
+.stagger-animation>* {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+.stagger-animation>*:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.stagger-animation>*:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.stagger-animation>*:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.stagger-animation>*:nth-child(4) {
+    transition-delay: 0.4s;
+}
+
+.stagger-animation.animate>* {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.img-cover-holder {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+}
+
+.img-cover-holder img {
+    width: 100%;
+    border-radius: 20px;
+    width: 60%;
+}
+
+.img-cover-holder::before {
+    width: 19%;
+    content: '';
+    aspect-ratio: 1/2;
+    background: url(https://cdn.shopify.com/s/files/1/0811/0142/2911/files/Rectangle_2406.png?v=1744116984);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: -70px;
+}
+
+
+.img-cover-holder::after {
+    width: 19%;
+    content: '';
+    aspect-ratio: 1/2;
+    background: url(https://cdn.shopify.com/s/files/1/0811/0142/2911/files/Rectangle_2407.png?v=1744118156);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 0;
+    top: -70px;
+}
+
+/* https://cdn.shopify.com/s/files/1/0811/0142/2911/files/Rectangle_2406.png?v=1744116984 */
+
+
+
+/* Mobile Responsive Styles */
+@media (max-width: 767px) {
+
+    /* Top Banner */
+    .top-banner-content h1 {
+        font-size: 48px;
+        line-height: 1.2;
+        letter-spacing: -1px;
+    }
+
+    .top-banner-content h1 span {
+        font-size: 48px;
+        line-height: 1.2;
+    }
+
+    .top-banner-content p {
+        font-size: 18px;
+        padding: 0 20px;
+    }
+
+    .coverflow-swiper {
+        padding: 70px 0;
+    }
+
+    /* Experience Section */
+    .experience-sec-holder {
+        padding: 40px 0;
+        text-align: center;
+    }
+
+    .exp-box-holder {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+
+    .exp-left h3 {
+        font-size: 48px;
+        line-height: 1.2;
+        letter-spacing: -1px;
+    }
+
+    .exp-left h3 span {
+        font-size: 48px;
+        line-height: 1.2;
+    }
+
+    .exp-left p {
+        font-size: 18px;
+        margin: 20px 0;
+    }
+
+    .exp-img {
+        position: relative;
+        max-width: 100%;
+        margin: 30px 0;
+        bottom: 0;
+        display: none;
+    }
+
+    .exp-right {
+        justify-content: center;
+    }
+
+    /* Features Section */
+    .features-section {
+        padding: 40px 0;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .feature-box {
+        padding: 15px 15px;
+        aspect-ratio: inherit;
+    }
+
+    .hiw-left a {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .turnkey-center {
+        padding: 20px;
+        padding-bottom: 0;
+    }
+
+    .open-lc-cntn::after {
+        display: none;
+    }
+
+    .am-footer .footer-cntn {
+        flex-direction: column-reverse !important;
+    }
+
+    a.site-btn {
+        height: inherit;
+        width: fit-content;
+        padding: 12px 25px;
+    }
+
+    .in-fd-right {
+        width: 100%;
+    }
+
+
+    .in-fd-right button {
+        width: 100%;
+    }
+
+    .am-footer .ft-left form .input-field {
+        gap: 5px;
+    }
+
+    .am-contact .contact-cntn form button {
+        padding: 15px 18px;
+    }
+
+    /* How It Works Section */
+    .how-it-works {
+        padding: 40px 0;
+    }
+
+    .hiw-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .hiw-left h2 {
+        font-size: 48px;
+        margin-bottom: 20px;
+    }
+
+    .hiw-left p {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    .hiw-right {
+        height: 450px;
+    }
+
+    .step-box {
+        padding: 25px;
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .step-box p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    /* Turnkey Section */
+    .turnkey-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .turnkey-left h4 {
+        font-size: 48px;
+    }
+
+    .turnkey-left h6 {
+        font-size: 22px;
+    }
+
+    .turnkey-center-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .turnkey-center-content h5 {
+        font-size: 32px;
+        padding-bottom: 20px;
+    }
+
+    .turnkey-center-content-left {
+        max-width: 100%;
+    }
+
+    /* Open Location Section */
+    .open-lc-cntn {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .am-open-lc a {
+        margin: 0 auto;
+    }
+
+    .lc-left .sec-title {
+        font-size: 48px;
+    }
+
+    .lc-right img {
+        max-width: 100%;
+    }
+
+
+    .guest-btn-holder {
+        display: none;
+    }
+
+    /* Franchise Section */
+    .exp-top {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .exp-tp-left .sec-title {
+        font-size: 48px;
+    }
+
+    .exp-tp-right .disc {
+        font-size: 18px;
+    }
+
+    .mq-inner {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .mq-coll {
+        padding: 25px;
+    }
+
+    /* Guest Section */
+    .gt-cntn {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .gt-left .sec-title {
+        font-size: 48px;
+    }
+
+    .gt-left .disc {
+        font-size: 18px;
+        max-width: 100%;
+    }
+
+    .guest-slider.hiw-steps-slider {
+        padding-right: 0;
+    }
+
+    .guest-btn-holder {
+        flex-direction: row;
+        top: auto;
+        bottom: -60px;
+        right: 50%;
+        transform: translateX(50%);
+        gap: 20px;
+    }
+
+    /* Contact Section */
+    .contact-cntn {
+        padding: 40px 20px;
+    }
+
+    .contact-cntn h1 {
+        font-size: 36px;
+        margin-bottom: 30px;
+    }
+
+    .input-field {
+        margin-bottom: 20px;
+    }
+
+    .options {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    /* Footer */
+    .footer-cntn {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .ft-left {
+        text-align: center;
+    }
+
+    .ft-left h4 {
+        font-size: 32px;
+    }
+
+    .ft-left h6 {
+        font-size: 16px;
+    }
+
+    .sc-links ul {
+        justify-content: center;
+    }
+
+    .ft-map {
+        text-align: center;
+    }
+
+    .ft-map .logo {
+        max-width: 200px;
+        margin-bottom: 30px;
+    }
+
+    .ft-map .map {
+        max-width: 100%;
+    }
+
+    /* Animation adjustments for mobile */
+    .fade-in-left,
+    .fade-in-right {
+        transform: translateY(30px);
+    }
+
+    .animate {
+        transform: translateY(0);
+    }
+
+    .top-banner {
+        min-height: inherit;
+    }
+
+    .top-banner-content {
+        margin: 0;
+    }
+}
+
+/* Additional tablet breakpoint for better scaling */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .top-banner-content h1,
+    .top-banner-content h1 span {
+        font-size: 72px;
+        line-height: 1.2;
+    }
+
+    .exp-left h3,
+    .exp-left h3 span,
+    .hiw-left h2,
+    .gt-left .sec-title {
+        font-size: 64px;
+    }
+
+    .turnkey-grid {
+        grid-template-columns: 1fr 1.5fr 1fr;
+    }
+
+    .features-grid,
+    .mq-inner {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
