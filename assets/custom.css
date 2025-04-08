@@ -160,7 +160,13 @@
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.fg {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 24px;
 }
 
@@ -206,10 +212,36 @@
     text-transform: capitalize;
 }
 
+
+
+
+
+
+
+
+/* BAWAAL */
+.exp-left,
+.fg-1 {
+    transform-origin: bottom left;
+    transform: rotate(-20deg);
+}
+
+.exp-right,
+.fg-2 {
+    transform-origin: bottom right;
+}
+
+
+
+
+
+
+
+
 /* Responsive Styles */
 @media (max-width: 1200px) {
     .features-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         max-width: 800px;
     }
 }
@@ -859,6 +891,11 @@
     }
 
     .features-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .fg {
         grid-template-columns: 1fr;
         gap: 20px;
     }
