@@ -232,7 +232,22 @@
 }
 
 
+.stikki {
+    min-height: 200vh;
+    position: relative;
+}
 
+.stikki>section,
+.stikki>div {
+    position: sticky;
+    top: 0;
+}
+
+.mid-view {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
 
 
 
@@ -243,6 +258,39 @@
     .features-grid {
         grid-template-columns: repeat(1, 1fr);
         max-width: 800px;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    .exp-left,
+    .fg-1,
+    .exp-right,
+    .fg-2,
+    .step-dragger {
+        transform: none !important;
+    }
+
+    .exp-img {
+        display: none;
+    }
+
+    .hiw-right,
+    .step-list {
+        height: auto !important;
+        max-height: inherit !important;
+    }
+
+    .stikki {
+        min-height: inherit;
+    }
+
+    .hiw-left a.site-btn {
+        margin: 0 auto;
+    }
+
+    .features-grid {
+        margin: auto;
     }
 }
 
@@ -269,6 +317,7 @@
 .how-it-works {
     padding: 100px 0;
     background: #ffffff;
+    width: 100%;
 }
 
 .hiw-grid {
@@ -306,6 +355,19 @@
 .hiw-right {
     height: 600px;
     position: relative;
+    overflow: hidden;
+}
+
+.step-list {
+    width: 100%;
+    overflow: hidden;
+    max-height: 600px;
+}
+
+.step-dragger {
+    display: grid;
+    gap: 20px;
+    width: 100%;
 }
 
 .hiw-steps-slider {

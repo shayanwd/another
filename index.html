@@ -126,16 +126,94 @@
             </div>
         </section>
     </div>
-    <section class="how-it-works fade-in">
-        <div class="container">
-            <div class="hiw-grid">
-                <div class="hiw-left fade-in-left">
-                    <h2>How It<br><span>Works</span></h2>
-                    <p>We'll get to know each other through a simple, mutual evaluation process.</p>
-                    <a href="#" class="site-btn">CHECK ELIGIBILITY</a>
-                </div>
-                <div class="hiw-right fade-in-right">
-                    <div class="swiper hiw-steps-slider">
+
+    <div class="stikki">
+        <div class="mid-view">
+            <section class="how-it-works fade-in">
+                <div class="container">
+                    <div class="hiw-grid">
+                        <div class="hiw-left fade-in-left">
+                            <h2>How It<br><span>Works</span></h2>
+                            <p>We'll get to know each other through a simple, mutual evaluation process.</p>
+                            <a href="#" class="site-btn">CHECK ELIGIBILITY</a>
+                        </div>
+                        <div class="hiw-right fade-in-right">
+                            <div class="step-list">
+                                <div class="step-dragger">
+                                    <div class="swiper-slide">
+                                        <div class="step-box">
+                                            <div class="step-number">01</div>
+
+                                            <p>INTRODUCTION TO ANOTHER NINE It's the ideal indoor golf experience -
+                                                24/7,
+                                                fully
+                                                self-service, all private suites, no memberships required. If your
+                                                application
+                                                meets the minimum requirements, we'll be in touch!</p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="step-box active">
+                                            <div class="step-number">02</div>
+
+                                            <p>
+                                                Exploring the Model We'll get to know you and you'll get to know us.
+                                                We'll
+                                                talk
+                                                through the experience, the model, and what it takes to get started.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="step-box">
+                                            <div class="step-number">03</div>
+                                            <p>
+                                                Location Selection Our HQ team will work with you to check territories,
+                                                identify
+                                                the right market, and select the ideal location for your facility.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="step-box">
+                                            <div class="step-number">04</div>
+                                            <p>
+                                                Buildout and Training With support from HQ and our Partners, swiftly
+                                                work
+                                                through the construction phase in pursuit of your grand opening. You'll
+                                                also
+                                                complete all the onboarding and training you need.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="step-box">
+                                            <div class="step-number">05</div>
+                                            <p>
+                                                Grand Opening The big day is here! You'll open your doors with a fully
+                                                operational, turnkey indoor golf business that stands out in your market
+                                                on
+                                                day
+                                                one.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="step-box">
+                                            <div class="step-number">06</div>
+                                            <p>
+                                                Open for Business You'll have dedicated HQ support to you as you operate
+                                                and
+                                                grow your location.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="swiper hiw-steps-slider">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="step-box">
@@ -201,11 +279,13 @@
 
 
                         </div>
+                    </div> -->
+                        </div>
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
-    </section>
+    </div>
 
 
     <section class="turnkey-section fade-in">
@@ -683,18 +763,18 @@
     // });
 
     // How It Works vertical slider
-    var stepsSwiper = new Swiper(".hiw-steps-slider", {
-        direction: "vertical",
-        slidesPerView: 3,
-        centeredSlides: true,
-        spaceBetween: 15,
-        // initialSlide: 1,
-        grabCursor: true,
-        autoplay: {
-            delay: 4000,
-            disableOnInteraction: false,
-        },
-    });
+    // var stepsSwiper = new Swiper(".hiw-steps-slider", {
+    //     direction: "vertical",
+    //     slidesPerView: 3,
+    //     centeredSlides: true,
+    //     spaceBetween: 15,
+    //     // initialSlide: 1,
+    //     grabCursor: true,
+    //     autoplay: {
+    //         delay: 4000,
+    //         disableOnInteraction: false,
+    //     },
+    // });
 
     var guestsSlides = new Swiper(".hiw-steps-slider", {
         direction: "vertical",
@@ -742,37 +822,64 @@
     // GSAP ScrollTrigger Timeline
     gsap.registerPlugin(ScrollTrigger);
 
-    // Rotate animation for exp-left and fg-1 elements
-    gsap.set('.exp-left, .fg-1', {
-        rotate: -20
-    });
-    gsap.set('.exp-right, .fg-2', {
-        rotate: 20
-    });
-    gsap.set('.exp-img', {
-        yPercent: 100,
-        opacity: 0.5,
-    });
-    const tl = gsap.timeline({
+    // Only run animation on desktop (screen width > 1024px)
+    if (window.innerWidth > 1200) {
+        // Rotate animation for exp-left and fg-1 elements
+        gsap.set('.exp-left, .fg-1', {
+            rotate: -20,
+            x: "-100vw"
+        });
+        gsap.set('.exp-right, .fg-2', {
+            rotate: 20,
+            x: "100vw"
+        });
+        gsap.set('.exp-img', {
+            yPercent: 100,
+            opacity: 0.5,
+        });
+
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".pinner",
+                start: "top 80%",
+                end: "top 50%",
+                toggleActions: "play none none reverse",
+                scrub: 2,
+                // markers: true,
+            }
+        });
+
+        // Animate section content
+        tl.to('.exp-left, .fg-1, .exp-right, .fg-2', {
+            rotate: 0,
+            x: 0,
+        }, "a");
+
+        tl.to('.exp-img', {
+            yPercent: 0,
+            opacity: 1,
+        }, "a");
+    }
+
+
+
+    const draglistHeight = document.querySelector('.step-list').clientHeight;
+    const draggerHeight = document.querySelector('.step-dragger').clientHeight;
+    const tl2 = gsap.timeline({
         scrollTrigger: {
-            trigger: ".pinner",
-            start: "top 80%",
-            end: "top 50%",
+            trigger: ".stikki",
+            start: "top 50%",
+            end: "bottom 90%",
             toggleActions: "play none none reverse",
-            markers: true,
-            // pin: true,
             scrub: 2,
+            markers: true,
         }
     });
+    tl2.to('.step-dragger', {
+        y: (-draggerHeight) + draglistHeight,
+        // y: -100,
+    });
 
-    // Animate section content
-    tl.to('.exp-left, .fg-1, .exp-right, .fg-2', {
-        rotate: 0,
-    }, "a")
-    tl.to('.exp-img', {
-        yPercent: 0,
-        opacity: 1,
-    }, "a");
 </script>
 
 
