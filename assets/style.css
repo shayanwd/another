@@ -73,6 +73,10 @@ a.site-btn:hover::before {
     left: 100%;
 }
 
+button {
+    cursor: pointer;
+}
+
 .sec-title {
     font-weight: 700;
     font-size: 60px;
@@ -142,7 +146,7 @@ a.site-btn:hover::before {
 
 .nav-link {
     font-family: 'Outfit', sans-serif;
-    font-size: 16px;
+    font-size: 13px;
     font-weight: 500;
     color: #353439;
     text-decoration: none;
@@ -153,21 +157,17 @@ a.site-btn:hover::before {
 .nav-link::after {
     content: '';
     position: absolute;
-    bottom: -5px;
+    bottom: -27px;
     left: 0;
     width: 0;
-    height: 2px;
-    background: #C0DE48;
+    height: 5px;
+    background: #353439;
     transition: width 0.3s ease;
 }
 
 .nav-link:hover::after,
 .nav-link.active::after {
     width: 100%;
-}
-
-.nav-link.active {
-    color: #C0DE48;
 }
 
 .hamburger {
@@ -931,13 +931,20 @@ div:empty {
 }
 
 .am-footer .sc-links ul li a {
-    width: 55px;
-    height: 55px;
+    width: 45px;
+    height: 45px;
     background-color: #282828;
-    border-radius: 16px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.am-footer .sc-links ul li a img {
+    width: 20px;
+    height: 20px;
+    display: block;
+    object-fit: contain;
 }
 
 .am-footer .short-parah {
