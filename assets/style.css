@@ -26,8 +26,8 @@ body {
 }
 
 a.site-btn {
-    font-weight: 800;
-    font-size: 15px;
+    font-weight: 700;
+    font-size: 13px;
     line-height: 28px;
     letter-spacing: 0%;
     text-align: center;
@@ -43,11 +43,11 @@ a.site-btn {
     border: 1px solid #C0DE48;
     max-width: 210px;
     width: 100%;
-    height: 60px;
+    height: 56px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(180deg, #F3FFDA 0%, #C0DE48 100%);
+    background: linear-gradient(180deg, #edfcce 0%, #C0DE48 100%);
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -157,7 +157,7 @@ button {
 .nav-link::after {
     content: '';
     position: absolute;
-    bottom: -27px;
+    bottom: -24px;
     left: 0;
     width: 0;
     height: 5px;
@@ -168,6 +168,10 @@ button {
 .nav-link:hover::after,
 .nav-link.active::after {
     width: 100%;
+}
+
+.nav-link.active {
+    color: #C0DE48;
 }
 
 .hamburger {
@@ -388,7 +392,7 @@ background: linear-gradient(0deg,
     justify-content: space-between;
     position: relative;
     padding: 0px 75px;
-    gap: 110px;
+    gap: 50px;
 }
 
 .open-lc-cntn::before {
@@ -398,7 +402,7 @@ background: linear-gradient(0deg,
     left: 0;
     top: 0;
     width: 100%;
-    height: calc(100% - 100px);
+    height: calc(100% - 140px);
     background: #000000;
     border-radius: 24px;
     z-index: -1;
@@ -412,8 +416,8 @@ background: linear-gradient(0deg,
     display: block;
     position: absolute;
     left: 75px;
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
     background-image: url(https://cdn.shopify.com/s/files/1/0811/0142/2911/files/lc-img-2.png?v=1744115593);
     background-size: contain;
     background-repeat: no-repeat;
@@ -434,10 +438,24 @@ background: linear-gradient(0deg,
 
 .open-lc-cntn .lc-right {
     width: 100%;
-    max-width: 440px;
+    max-width: 490px;
     margin-left: auto;
     height: 100%;
     overflow: hidden;
+    aspect-ratio: 680 / 716;
+    position: relative;
+    border-radius: 24px;
+}
+
+.open-lc-cntn .lc-right::before {
+    content: "";
+    position: absolute;
+    background: linear-gradient(160.77deg, rgba(192, 222, 72, 0) 31.42%, #C0DE48 93.55%);
+    mix-blend-mode: color;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .open-lc-cntn .lc-right img {
@@ -503,13 +521,17 @@ background: linear-gradient(0deg,
     opacity: 1;
 }
 
+.am-franchise .mq-parent:has(.mq-coll:hover) .mq-inner {
+    animation-play-state: paused;
+}
+
 .am-franchise .mq-parent .mq-inner {
     display: grid;
     grid-template-columns: max-content max-content max-content max-content;
     align-items: center;
     gap: 20px;
     padding-right: var(--space);
-    animation: moove 10s linear infinite;
+    animation: moove 33s linear infinite;
 }
 
 @keyframes moove {
@@ -1731,7 +1753,7 @@ div:empty {
     justify-content: center;
     gap: 25px;
     position: relative;
-    margin-bottom: -35px;
+    margin-bottom: -26px;
 }
 
 .top-banner-content h1 span {
@@ -2051,6 +2073,7 @@ div:empty {
     display: grid;
     gap: 20px;
     width: 100%;
+    padding-top: 180px;
 }
 
 .hiw-steps-slider {
@@ -2292,6 +2315,13 @@ div:empty {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+}
+
+.guest-slider-button-next svg,
+.guest-slider-button-prev svg {
+    width: 55%;
+    aspect-ratio: 1/1;
+    height: auto !important;
 }
 
 /* Responsive Styles */
@@ -2963,7 +2993,7 @@ div:empty {
 }
 
 .header-cta a {
-    height: 50px;
+    height: 40px;
     padding: 0 30px !important;
     font-size: 14px !important;
 }

@@ -378,7 +378,7 @@
                 </div>
 
                 <div class="lc-right fade-in-right">
-                    <img src="https://cdn.shopify.com/s/files/1/0811/0142/2911/files/lc-img.png?v=1744115595" alt="">
+                    <img src="assets/images/attachment.gif" alt="">
                 </div>
             </div>
         </div>
@@ -882,8 +882,8 @@
             const tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: ".pinner",
-                    start: "top 80%",
-                    end: "top 50%",
+                    start: "top 100%",
+                    end: "top 40%",
                     toggleActions: "play none none reverse",
                     scrub: 2,
                     // markers: true,
@@ -891,15 +891,19 @@
             });
 
             // Animate section content
-            tl.to('.exp-left, .fg-1, .exp-right, .fg-2', {
-                rotate: 0,
-                x: 0,
-            }, "a");
-
             tl.to('.exp-img', {
                 yPercent: 0,
                 opacity: 1,
-            }, "a");
+                delay: -1,
+            });
+
+            tl.to('.exp-left, .fg-1, .exp-right, .fg-2', {
+                rotate: 0,
+                x: 0,
+                delay: 0,
+            });
+
+
         }
 
 
