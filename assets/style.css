@@ -1123,12 +1123,13 @@ div:empty {
     }
 
     .am-footer .footer-cntn {
-        flex-direction: column;
+        flex-direction: column-reverse;
         gap: 80px;
     }
 
     .am-footer .ft-left {
         width: 100%;
+        text-align: left;
     }
 
     .am-footer .ft-left form {
@@ -1393,6 +1394,7 @@ div:empty {
         gap: 40px;
         padding: 120px 25px 60px 25px;
     }
+
 
 }
 
@@ -1699,6 +1701,7 @@ div:empty {
     .am-footer .pay-card-img img {
         width: 100%;
     }
+
 }
 
 
@@ -1812,7 +1815,7 @@ div:empty {
 .exp-left h3 {
     color: #353439;
     font-family: Outfit;
-    font-size: 80px;
+    font-size: 47px;
     font-weight: 700;
     letter-spacing: -2px;
     text-transform: capitalize;
@@ -2121,7 +2124,7 @@ div:empty {
     font-family: Outfit;
     font-size: 16px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 28px;
 }
 
@@ -2247,7 +2250,7 @@ div:empty {
 
 
 .turnkey-center-content-left {
-    border-radius: 32px;
+    border-radius: 22px;
     background: #18181B;
     padding: 20px;
     height: 100%;
@@ -2655,6 +2658,7 @@ div:empty {
         font-size: 48px;
         line-height: 1.2;
         letter-spacing: -1px;
+        width: 100%;
     }
 
     .exp-left h3 span {
@@ -2665,6 +2669,7 @@ div:empty {
     .exp-left p {
         font-size: 18px;
         margin: 20px 0;
+        width: 100%;
     }
 
     .exp-img {
@@ -2971,17 +2976,41 @@ div:empty {
     }
 
     .exp-left h3,
-    .exp-left h3 span,
+    .exp-left h3 span {
+        line-height: 130%;
+        font-size: 42px;
+    }
+
     .hiw-left h2,
     .gt-left .sec-title {
         font-size: 64px;
+    }
+
+    .hiw-left p {
+        margin: 0 auto 30px;
+    }
+
+
+    .am-footer .ft-map img.map {
+        max-width: 100%;
+        display: block;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    html,
+    body {
+        overflow-x: clip;
     }
 
     .turnkey-grid {
         grid-template-columns: 1fr 1.5fr 1fr;
     }
 
-    .features-grid,
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
     .mq-inner {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -3012,4 +3041,14 @@ div:empty {
 
 div:empty {
     display: block !important;
+}
+
+@media (max-width: 768px) {
+
+    .exp-left h3,
+    .exp-left h3 span {
+        font-size: 28px;
+        line-height: 1.2;
+    }
+
 }
