@@ -2623,10 +2623,10 @@ div:empty {
 
     /* Top Banner */
     .top-banner-content h1 {
-        font-size: 40px;
+        font-size: 35px;
         line-height: 1.2;
         letter-spacing: -1px;
-        margin-top: 40px;
+        margin-top: 60px !important;
     }
 
     .top-banner-content h1 span {
