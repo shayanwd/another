@@ -15,6 +15,251 @@
 
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+    <style>
+        .how-section .slider-wrapper {
+            height: 400vh;
+            position: relative;
+            background: white;
+        }
+
+        .how-section .content-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+            height: 100vh;
+            position: sticky;
+            top: 0;
+            gap: 80px;
+        }
+
+        .how-section .sticky-title {
+            flex: 0 0 400px;
+            position: relative;
+            padding-top: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            height: auto;
+        }
+
+        .how-section .sticky-title h1 {
+            margin-top: -40px;
+            color: #353439;
+            font-family: Outfit;
+            font-size: 80px;
+            font-weight: 700;
+            line-height: 1;
+            letter-spacing: -2.2px;
+            margin-bottom: 30px;
+        }
+
+        .how-section .sticky-title h1 span {
+            display: block;
+            color: #C1E755;
+        }
+
+        .how-section .sticky-title p {
+            color: #555770;
+            font-family: Outfit;
+            font-size: 18px;
+            margin-bottom: 30px;
+            max-width: 380px;
+        }
+
+
+        .how-section .slider-container {
+            flex: 0 0 800px;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .how-section .swiper {
+            width: 100%;
+            max-width: 800px;
+            height: 600px;
+            padding: 50px 0;
+        }
+
+        .how-section .swiper-slide {
+            width: 100%;
+            height: 200px;
+            border-radius: 30px;
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            transition: all 0.3s ease;
+            opacity: 0.3;
+            background: #F4F4F5;
+        }
+
+        .how-section .swiper-slide-active {
+            transform: scale(1);
+            opacity: 1;
+            border-radius: 38.5px;
+
+            background: linear-gradient(141deg, #F3FFDA 22.54%, #C0DE48 128.68%);
+        }
+
+        .how-section .number {
+            color: #353439;
+            text-align: center;
+            font-family: Outfit;
+            font-size: 82px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 38px;
+            letter-spacing: -1.64px;
+            text-transform: capitalize;
+            min-width: 120px;
+            opacity: 1;
+        }
+
+        .how-section .swiper-slide-active .number {
+            color: #C1E755;
+            opacity: 1;
+        }
+
+        .how-section .content {
+            flex: 1;
+        }
+
+        .how-section .swiper-slide p {
+            color: #353439;
+            font-family: Outfit;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 28px;
+            opacity: 0.8;
+        }
+
+
+
+        /* Responsive Styles */
+        @media (max-width: 1200px) {
+            .how-section .content-container {
+                max-width: 1000px;
+                gap: 60px;
+            }
+
+            .how-section .sticky-title {
+                flex: 0 0 350px;
+            }
+
+            .how-section .sticky-title h1 {
+                font-size: 60px;
+            }
+
+            .how-section .slider-container {
+                flex: 0 0 650px;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .how-section .content-container {
+                flex-direction: column;
+                padding: 20px;
+                gap: 40px;
+                align-items: center;
+            }
+
+            .how-section .sticky-title {
+                flex: none;
+                width: 100%;
+                text-align: center;
+                align-items: center;
+                padding-top: 40px;
+                margin-top: 0;
+            }
+
+            .how-section .sticky-title h1 {
+                margin-top: 0;
+            }
+
+            .how-section .sticky-title p {
+                margin: 0 auto 40px;
+                text-align: center;
+            }
+
+            .how-section .slider-container {
+                flex: none;
+                width: 100%;
+                height: auto;
+            }
+
+            .how-section .swiper {
+                height: 500px;
+                padding: 30px 0;
+            }
+
+            .how-section .swiper-slide {
+                height: 160px;
+                padding: 30px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .how-section .sticky-title h1 {
+                font-size: 48px;
+            }
+
+            .how-section .swiper {
+                height: 450px;
+            }
+
+            .how-section .swiper-slide {
+                height: 140px;
+                padding: 20px;
+                gap: 20px;
+            }
+
+            .how-section .number {
+                font-size: 60px;
+                min-width: 80px;
+            }
+
+            .how-section .progress-bar {
+                right: 15px;
+                height: 150px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .how-section .content-container {
+                padding: 15px;
+            }
+
+            .how-section .sticky-title h1 {
+                font-size: 36px;
+            }
+
+            .how-section .swiper {
+                height: 400px;
+            }
+
+            .how-section .swiper-slide {
+                height: 130px;
+                padding: 15px;
+                gap: 15px;
+                border-radius: 20px;
+            }
+
+            .how-section .number {
+                font-size: 48px;
+                min-width: 60px;
+            }
+        }
+    </style>
+
+
 </head>
 
 <body>
@@ -168,7 +413,81 @@
         </section>
     </div>
 
-    <div class="stikki" id="hiw">
+
+
+
+    <section class="how-section">
+        <div class="slider-wrapper">
+            <div class="content-container">
+                <div class="sticky-title">
+                    <h1>How It<br><span>Works</span></h1>
+                    <p>We'll get to know each other through a simple, mutual evaluation process.</p>
+                    <a href="#" class="site-btn">CHECK ELIGIBILITY</a>
+                </div>
+                <div class="slider-container">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="number">01</div>
+                                <div class="content">
+                                    <p>INTRODUCTION TO ANOTHER NINE It's the ideal indoor golf experience - 24/7, fully
+                                        self-service, all private suites, no memberships required. If your application
+                                        meets
+                                        the minimum requirements, we'll be in touch!</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="number">02</div>
+                                <div class="content">
+                                    <p>Exploring the Model We'll get to know you and you'll get to know us. We'll talk
+                                        through the experience, the model, and what it takes to get started.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="number">03</div>
+                                <div class="content">
+                                    <p>Location Selection Our HQ team will work with you to check territories, identify
+                                        the
+                                        right market, and select the ideal location for your facility.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="number">04</div>
+                                <div class="content">
+                                    <p>Buildout and Training With support from HQ and our Partners, swiftly work through
+                                        the
+                                        construction phase in pursuit of your grand opening. You'll also complete all
+                                        the
+                                        onboarding and training you need.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="number">05</div>
+                                <div class="content">
+                                    <p>Grand Opening The big day is here! You'll open your doors with a fully
+                                        operational,
+                                        turnkey indoor golf business that stands out in your market on day one.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="number">06</div>
+                                <div class="content">
+                                    <p>Open for Business You'll have dedicated HQ support to you as you operate and grow
+                                        your location.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" style="background-color: transparent; box-shadow: none;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <div class="stikki" id="hiw" style="display: none;">
         <div class="mid-view">
             <section class="how-it-works fade-in">
                 <div class="container">
@@ -779,7 +1098,44 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
 
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const swiper = new Swiper('.swiper', {
+                direction: 'vertical',
+                slidesPerView: 3,
+                spaceBetween: 30,
+                centeredSlides: true,
+                speed: 800,
+                allowTouchMove: false,
+                effect: 'slide'
+            });
 
+            const sliderWrapper = document.querySelector('.slider-wrapper');
+
+            const totalSlides = swiper.slides.length - 2; // Subtract visible slides - 1 for zero-based
+
+            function updateSlider() {
+                const rect = sliderWrapper.getBoundingClientRect();
+                const scrollProgress = -rect.top / (rect.height - window.innerHeight);
+                const clampedProgress = Math.max(0, Math.min(1, scrollProgress));
+                const targetSlide = Math.min(
+                    Math.floor(clampedProgress * totalSlides),
+                    totalSlides
+                );
+
+                swiper.slideTo(targetSlide, 800);
+
+            }
+
+            // Update on scroll
+            window.addEventListener('scroll', () => {
+                window.requestAnimationFrame(updateSlider);
+            });
+
+            // Initial setup
+            updateSlider();
+        });
+    </script>
 
 
 

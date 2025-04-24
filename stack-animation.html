@@ -4,8 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scroll-Based Card Slider</title>
+    <title>How It Works - Another Nine</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -15,218 +18,247 @@
 
         body {
             font-family: Arial, sans-serif;
-            background: #f5f5f7;
+            background: white;
             color: #333;
             overflow-x: hidden;
         }
 
-        .section {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: clamp(1.5rem, 4vw, 2rem);
-            color: #666;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .slider-wrapper {
+        .how-section .slider-wrapper {
             height: 400vh;
-            /* Height for scrolling through all slides */
             position: relative;
+            background: white;
         }
 
-        .content-container {
+        .how-section .content-container {
             display: flex;
             align-items: center;
             justify-content: space-between;
             max-width: 1400px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 40px;
             height: 100vh;
             position: sticky;
             top: 0;
-            gap: 40px;
+            gap: 80px;
         }
 
-        .sticky-title {
-            flex: 0 0 300px;
+        .how-section .sticky-title {
+            flex: 0 0 400px;
             position: relative;
+            padding-top: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            height: auto;
         }
 
-        .sticky-title h1 {
-            font-size: clamp(32px, 5vw, 48px);
-            font-weight: bold;
-            color: #333;
-            position: sticky;
-            top: 50%;
-            transform: translateY(-50%);
+        .how-section .sticky-title h1 {
+            margin-top: -40px;
+            color: #353439;
+            font-family: Outfit;
+            font-size: 80px;
+            font-weight: 700;
+            line-height: 1;
+            letter-spacing: -2.2px;
+            margin-bottom: 30px;
         }
 
-        .slider-container {
+        .how-section .sticky-title h1 span {
+            display: block;
+            color: #C1E755;
+        }
+
+        .how-section .sticky-title p {
+            color: #555770;
+            font-family: Outfit;
+            font-size: 18px;
+            margin-bottom: 30px;
+            max-width: 380px;
+        }
+
+
+        .how-section .slider-container {
             flex: 0 0 800px;
             height: 100vh;
             display: flex;
             align-items: center;
-            justify-content: center;
         }
 
-        .swiper {
+        .how-section .swiper {
             width: 100%;
             max-width: 800px;
             height: 600px;
             padding: 50px 0;
         }
 
-        .swiper-slide {
+        .how-section .swiper-slide {
             width: 100%;
-            height: 180px;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            height: 200px;
+            border-radius: 30px;
             padding: 40px;
             display: flex;
             align-items: center;
-            gap: 30px;
+            gap: 40px;
             transition: all 0.3s ease;
-            opacity: 0.4;
+            opacity: 0.3;
+            background: #F4F4F5;
         }
 
-        .swiper-slide-active {
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        .how-section .swiper-slide-active {
             transform: scale(1);
             opacity: 1;
-            background-color: greenyellow;
+            border-radius: 38.5px;
+
+            background: linear-gradient(141deg, #F3FFDA 22.54%, #C0DE48 128.68%);
         }
 
-        .swiper-slide-prev,
-        .swiper-slide-next {
-            opacity: 0.7;
+        .how-section .number {
+            color: #353439;
+            text-align: center;
+            font-family: Outfit;
+            font-size: 82px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 38px;
+            letter-spacing: -1.64px;
+            text-transform: capitalize;
+            min-width: 120px;
+            opacity: 1;
         }
 
-        .number {
-            font-size: clamp(48px, 8vw, 80px);
-            font-weight: bold;
-            color: #999;
-            min-width: min(80px, 20%);
+        .how-section .swiper-slide-active .number {
+            color: #C1E755;
+            opacity: 1;
         }
 
-        .content {
+        .how-section .content {
             flex: 1;
         }
 
-        h2 {
-            font-size: clamp(18px, 3vw, 24px);
-            margin-bottom: 10px;
-            color: #333;
+        .how-section .swiper-slide p {
+            color: #353439;
+            font-family: Outfit;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 28px;
+            opacity: 0.8;
         }
 
-        p {
-            font-size: clamp(14px, 2vw, 16px);
-            line-height: 1.5;
-            color: #666;
-        }
 
-        .progress-bar {
-            position: fixed;
-            right: 30px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 4px;
-            height: 200px;
-            background: rgba(0, 0, 0, 0.1);
-            border-radius: 2px;
-        }
-
-        .progress-fill {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            background: #333;
-            border-radius: 2px;
-            transition: height 0.3s ease;
-        }
 
         /* Responsive Styles */
         @media (max-width: 1200px) {
-            .content-container {
+            .how-section .content-container {
                 max-width: 1000px;
+                gap: 60px;
             }
 
-            .sticky-title {
-                flex: 0 0 250px;
+            .how-section .sticky-title {
+                flex: 0 0 350px;
             }
 
-            .slider-container {
+            .how-section .sticky-title h1 {
+                font-size: 60px;
+            }
+
+            .how-section .slider-container {
                 flex: 0 0 650px;
             }
         }
 
         @media (max-width: 991px) {
-            .content-container {
+            .how-section .content-container {
                 flex-direction: column;
                 padding: 20px;
-                gap: 20px;
+                gap: 40px;
+                align-items: center;
             }
 
-            .sticky-title {
+            .how-section .sticky-title {
                 flex: none;
                 width: 100%;
                 text-align: center;
-                margin-top: 40px;
+                align-items: center;
+                padding-top: 40px;
+                margin-top: 0;
             }
 
-            .slider-container {
+            .how-section .sticky-title h1 {
+                margin-top: 0;
+            }
+
+            .how-section .sticky-title p {
+                margin: 0 auto 40px;
+                text-align: center;
+            }
+
+            .how-section .slider-container {
                 flex: none;
                 width: 100%;
                 height: auto;
             }
 
-            .swiper {
+            .how-section .swiper {
                 height: 500px;
                 padding: 30px 0;
             }
 
-            .swiper-slide {
+            .how-section .swiper-slide {
                 height: 160px;
-                padding: 20px;
+                padding: 30px;
             }
         }
 
         @media (max-width: 767px) {
-            .swiper {
+            .how-section .sticky-title h1 {
+                font-size: 48px;
+            }
+
+            .how-section .swiper {
                 height: 450px;
             }
 
-            .swiper-slide {
+            .how-section .swiper-slide {
                 height: 140px;
-                padding: 15px;
-                gap: 15px;
+                padding: 20px;
+                gap: 20px;
             }
 
-            .progress-bar {
+            .how-section .number {
+                font-size: 60px;
+                min-width: 80px;
+            }
+
+            .how-section .progress-bar {
                 right: 15px;
                 height: 150px;
             }
         }
 
         @media (max-width: 480px) {
-            .content-container {
+            .how-section .content-container {
                 padding: 15px;
             }
 
-            .swiper {
+            .how-section .sticky-title h1 {
+                font-size: 36px;
+            }
+
+            .how-section .swiper {
                 height: 400px;
             }
 
-            .swiper-slide {
+            .how-section .swiper-slide {
                 height: 130px;
                 padding: 15px;
-                gap: 10px;
+                gap: 15px;
+                border-radius: 20px;
             }
 
-            .number {
+            .how-section .number {
+                font-size: 48px;
                 min-width: 60px;
             }
         }
@@ -234,77 +266,79 @@
 </head>
 
 <body>
-    <div class="section" style="background-color: black;">Scroll Down to Start</div>
-
-    <div class="slider-wrapper">
-        <div class="content-container">
-            <div class="sticky-title">
-                <h1>How it works</h1>
-            </div>
-            <div class="slider-container">
-                <div class="swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="number">01</div>
-                            <div class="content">
-                                <h2>INTRODUCTION TO ANOTHER NINE</h2>
-                                <p>It's the ideal indoor golf experience - 24/7, fully self-service, all private suites,
-                                    no
-                                    memberships required.</p>
+    <div class="section">Scroll Down to Start</div>
+    <section class="how-section">
+        <div class="slider-wrapper">
+            <div class="content-container">
+                <div class="sticky-title">
+                    <h1>How It<br><span>Works</span></h1>
+                    <p>We'll get to know each other through a simple, mutual evaluation process.</p>
+                    <a href="#" class="site-btn">CHECK ELIGIBILITY</a>
+                </div>
+                <div class="slider-container">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="number">01</div>
+                                <div class="content">
+                                    <p>INTRODUCTION TO ANOTHER NINE It's the ideal indoor golf experience - 24/7, fully
+                                        self-service, all private suites, no memberships required. If your application
+                                        meets
+                                        the minimum requirements, we'll be in touch!</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="number">02</div>
-                            <div class="content">
-                                <h2>Exploring the Model</h2>
-                                <p>We'll get to know you and you'll get to know us. We'll talk through the experience,
-                                    the
-                                    model, and what it takes to get started.</p>
+                            <div class="swiper-slide">
+                                <div class="number">02</div>
+                                <div class="content">
+                                    <p>Exploring the Model We'll get to know you and you'll get to know us. We'll talk
+                                        through the experience, the model, and what it takes to get started.</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="number">03</div>
-                            <div class="content">
-                                <h2>Location Selection</h2>
-                                <p>Our HQ team will work with you to check territories, identify the right market, and
-                                    select the ideal location for your facility.</p>
+                            <div class="swiper-slide">
+                                <div class="number">03</div>
+                                <div class="content">
+                                    <p>Location Selection Our HQ team will work with you to check territories, identify
+                                        the
+                                        right market, and select the ideal location for your facility.</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="number">04</div>
-                            <div class="content">
-                                <h2>Design & Development</h2>
-                                <p>Creating the perfect space for an exceptional indoor golf experience.</p>
+                            <div class="swiper-slide">
+                                <div class="number">04</div>
+                                <div class="content">
+                                    <p>Buildout and Training With support from HQ and our Partners, swiftly work through
+                                        the
+                                        construction phase in pursuit of your grand opening. You'll also complete all
+                                        the
+                                        onboarding and training you need.</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="number">05</div>
-                            <div class="content">
-                                <h2>Launch Preparation</h2>
-                                <p>Final steps and preparations before opening your doors to customers.</p>
+                            <div class="swiper-slide">
+                                <div class="number">05</div>
+                                <div class="content">
+                                    <p>Grand Opening The big day is here! You'll open your doors with a fully
+                                        operational,
+                                        turnkey indoor golf business that stands out in your market on day one.</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="number">06</div>
-                            <div class="content">
-                                <h2>Grand Opening</h2>
-                                <p>Welcome to the future of indoor golf entertainment!</p>
+                            <div class="swiper-slide">
+                                <div class="number">06</div>
+                                <div class="content">
+                                    <p>Open for Business You'll have dedicated HQ support to you as you operate and grow
+                                        your location.</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="swiper-slide" style="background-color: transparent; box-shadow: none;">
-
+                            <div class="swiper-slide" style="background-color: transparent; box-shadow: none;">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="section" style="background-color: black;">Continue Scrolling</div>
+    <div class="section">Continue Scrolling</div>
 
-    <div class="progress-bar">
-        <div class="progress-fill"></div>
-    </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
@@ -320,7 +354,7 @@
             });
 
             const sliderWrapper = document.querySelector('.slider-wrapper');
-            const progressFill = document.querySelector('.progress-fill');
+
             const totalSlides = swiper.slides.length - 2; // Subtract visible slides - 1 for zero-based
 
             function updateSlider() {
@@ -333,7 +367,7 @@
                 );
 
                 swiper.slideTo(targetSlide, 800);
-                progressFill.style.height = `${clampedProgress * 100}%`;
+
             }
 
             // Update on scroll
