@@ -266,6 +266,14 @@
                 min-width: 60px;
             }
         }
+
+        .section {
+            background-color: #555770;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     </style>
 </head>
 
@@ -333,6 +341,7 @@
                             </div>
                             <div class="swiper-slide" style="background-color: transparent; box-shadow: none;">
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -358,20 +367,21 @@
             });
 
             const sliderWrapper = document.querySelector('.slider-wrapper');
-
             const totalSlides = swiper.slides.length - 2; // Subtract visible slides - 1 for zero-based
+            const extraScrollSpace = 2; // Number of extra scrolls after last slide
 
             function updateSlider() {
                 const rect = sliderWrapper.getBoundingClientRect();
                 const scrollProgress = -rect.top / (rect.height - window.innerHeight);
                 const clampedProgress = Math.max(0, Math.min(1, scrollProgress));
+
+                // Calculate target slide with extra scroll space
                 const targetSlide = Math.min(
-                    Math.floor(clampedProgress * totalSlides),
+                    Math.floor(clampedProgress * (totalSlides + extraScrollSpace)),
                     totalSlides
                 );
 
                 swiper.slideTo(targetSlide, 800);
-
             }
 
             // Update on scroll
