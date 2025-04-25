@@ -1254,18 +1254,19 @@
                 x: "100vw"
             });
             gsap.set('.exp-img', {
-                yPercent: 100,
+                yPercent: 150,
                 opacity: 0.5,
             });
 
             const tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: ".pinner",
-                    start: "top 100%",
+                    start: "-50% 30%",
                     end: "top 55%",
                     toggleActions: "play none none reverse",
-                    scrub: 2,
-                    // markers: true,
+                    // scrub: 2,
+                    scrub: false,
+                    markers: true,
                 }
             });
 
@@ -1273,14 +1274,16 @@
             tl.to('.exp-img', {
                 yPercent: 0,
                 opacity: 1,
-                delay: -1,
-            });
+                delay: -0.1,
+                duration: 1.5,
+            }, "s");
 
             tl.to('.exp-left, .fg-1, .exp-right, .fg-2', {
                 rotate: 0,
                 x: 0,
                 delay: 0,
-            });
+                duration: 1.5,
+            }, "s");
 
 
         }
