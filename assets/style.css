@@ -849,7 +849,7 @@ div:empty {
 .am-footer {
     position: relative;
     width: 100%;
-    padding: 200px 0 60px 0;
+    padding: 300px 0 60px 0;
     background-color: #000000;
 }
 
@@ -1283,7 +1283,7 @@ div:empty {
     }
 
     .am-footer {
-        padding: 200px 0 180px 0;
+        padding: 200px 0 40px 0;
     }
 
     .am-footer .ft-left form {
@@ -1354,7 +1354,7 @@ div:empty {
 
     .am-contact .contact-cntn {
         max-width: 550px;
-        padding: 49px 30px 38px 30px;
+        padding: 20px 20px 20px 20px;
     }
 
     .am-contact .contact-cntn h1 {
@@ -1657,6 +1657,7 @@ div:empty {
     .am-footer .ft-left form .input-field {
         flex-direction: column;
         align-items: flex-start;
+        display: flex;
     }
 
     .am-footer .ft-left form .input-field .in-fd-left {
@@ -1863,7 +1864,7 @@ div:empty {
 
 /* Features Section Styles */
 .features-section {
-    padding: 0 0 80px 0;
+    padding: 0 0 0px 0;
     background: #ffffff;
 }
 
@@ -2740,6 +2741,8 @@ div:empty {
 
     .am-footer .ft-left form .input-field {
         gap: 5px;
+        flex-direction: column;
+        display: flex;
     }
 
     .am-contact .contact-cntn form button {
@@ -2843,7 +2846,13 @@ div:empty {
         flex-direction: column;
         text-align: center;
         gap: 20px;
+        display: flex;
     }
+
+    .am-footer .pay-card-img {
+        width: 100%;
+    }
+
 
     .exp-tp-left .sec-title {
         font-size: 48px;
@@ -2871,6 +2880,7 @@ div:empty {
 
     .gt-left .sec-title {
         font-size: 48px;
+        line-height: 1.3em;
     }
 
     .gt-left .disc {
